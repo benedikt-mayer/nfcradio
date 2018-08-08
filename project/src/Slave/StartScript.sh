@@ -1,0 +1,1 @@
+sudo python /home/pi/PEM2/project/src/Slave/SlaveMain.py
