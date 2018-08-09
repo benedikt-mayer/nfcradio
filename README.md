@@ -14,10 +14,11 @@
     1. Get "Raspbian Stretch with Desktop" from and follow instructions on https://www.raspberrypi.org/downloads/raspbian/.
     2. To set up some options, open a terminal and run `sudo raspi-config`:
         1. In the settings, select **Interfacing Options** -> **I2C** -> **Yes**, to start up the I2C core driver.
-        2. Go to **Network Options** -> **Wi-fi**, now enter the **SSID** and **password** of your access point / router. Now you have a internet connection to install software!
-        3. The serial port of RPi is set to serial terminal debugging function mode by default. If you want the serial port services as a common IO, you should modify the settings on the RPi.  
+        2. Now select **Interfacing Options** -> **SPI** -> **Yes** to enable SPI.
+        3. Go to **Network Options** -> **Wi-fi**, now enter the **SSID** and **password** of your access point / router. Now you have a internet connection to install software!
+        4. The serial port of RPi is set to serial terminal debugging function mode by default. If you want the serial port services as a common IO, you should modify the settings on the RPi.  
         Go to **Interfacing Options** -> **Serial** and select **No** in the first and **Yes** in the second dialog.
-        4. Press `Finish` to save the settings
+        1. Press `Finish` to save the settings. This will prompt you to reboot.
     3. When logged into the Raspberries, open a terminal and from the home repository of your raspberry (`~`, default is `/home/pi`), pull the source code from [Github](https://github.com/benedikt-mayer/nfcradio) by e.g. calling `git clone https://github.com/benedikt-mayer/nfcradio.git`.
     4. Run the shell script in the root repository of the git folder by opening a terminal and running `sudo sh install.sh` to install all necessary python libraries, setting config files etc.  
        This will reboot the device at the end. Don't interrupt the script unless you are prompted (which you will be).
