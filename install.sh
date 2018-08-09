@@ -30,7 +30,7 @@ fi
 
 # update all installed packages just in case
 tput setaf 2;echo "------------------------------------------------"
-echo "updating apt-get"
+echo "updating all installed packages"
 echo "------------------------------------------------"
 tput sgr0
 
