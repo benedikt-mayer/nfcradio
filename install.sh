@@ -121,7 +121,7 @@ run_autostart_script $user_input
 
 # completed
 tput setaf 2;echo "------------------------------------------------"
-echo "installation completed"
+echo "installation completed."
 echo "------------------------------------------------${reset}"
 
 # now reboot

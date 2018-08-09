@@ -36,3 +36,14 @@ The last ones by Jahzzar is licensed under a Attribution-ShareAlike 3.0 Internat
 
 Noahs Stark by krackatoa is licensed under a Attribution-NonCommercial-ShareAlike 3.0 International License. 
 Permissions beyond the scope of this license may be available at http://www.krackatoa.com or contact artist via email. [link to music](http://freemusicarchive.org/music/krackatoa/krackatoa_-_Singles_1002/Krackatoa_-_Noahs_Stark).
+
+
+The Boss by Dee Yan-Key is licensed under a Attribution-NonCommercial-ShareAlike License. [link to music](http://freemusicarchive.org/music/Dee_Yan-Key/Fast_Swing_reloaded/07--Dee_Yan-Key-The_Boss).
+
+The Pianist by Dee Yan-Key is licensed under a Attribution-NonCommercial-ShareAlike License. [link to music](http://freemusicarchive.org/music/Dee_Yan-Key/Summer_Nights/11--Dee_Yan-Key-The_Pianist).
+
+Hungaria by Latché Swing is licensed under a Attribution-Noncommercial-Share Alike 2.0 France License. [link to music](http://freemusicarchive.org/music/Latch_Swing/demo_2008/Hungaria).
+
+Little Lily Swing by Tri-Tachyon is licensed under a Attribution License. [link to music](http://freemusicarchive.org/music/Tri-Tachyon/Little_Lily_Swing/Tri-Tachyon_-_01_-_Little_Lily_Swing).
+
+Kelli's Number by U.S. Army Blues is licensed under a Public Domain Mark 1.0 License. [link to music](http://freemusicarchive.org/music/US_Army_Blues/Live_At_Blues_Alley/0_-_08_-_The_US_Army_Blues_-_Kellis_Number).
