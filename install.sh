@@ -14,6 +14,7 @@ sudo apt-get install python-dev
 sudo apt-get install python-smbus
 sudo apt-get install python-serial
 sudo apt-get install python-imaging
+sudo apt-get install pcregrep
 # install spi-dev
 $currentdir = echo pwd
 cd ~
@@ -29,7 +30,7 @@ cd $currentdir
 pip install Pillow
 pip install pygame
 # add soundcard
-if ! grep -q "pcm.!default { \n    type hw \n    card 1 \n} \n \nctl.!default { \n    type hw \n    card 1 \n} \n" /etc/asound.conf
+if ! grep -Pzoq "pcm.!default { \n    type hw \n    card 1 \n} \n \nctl.!default { \n    type hw \n    card 1 \n} \n" /etc/asound.conf
 then
     touch /etc/asound.conf
     echo "pcm.!default { \n    type hw \n    card 1 \n} \n \nctl.!default { \n    type hw \n    card 1 \n} \n" >> /etc/asound.conf
