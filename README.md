@@ -22,7 +22,7 @@
            `i2c-bcm2708`  
            Press the keys Ctrl+X to exit, and input Y to save the settings. Then, reboot the module to make the settings take effect.
     4. When logged into the Raspberries, pull the source code from [Github](https://github.com/benedikt-mayer/nfcradio).
-    5. Run the shell script in the root repository of the git folder by opening a terminal and running `sh install.sh` to install all necessary python libraries.
+    5. Run the shell script in the root repository of the git folder by opening a terminal and running `sudo sh install.sh` to install all necessary python libraries.
     6. Manually run the scripts to see if everything was installed properly:
         1. Navigate to the slave / master folder in PEM2/project/src/Slave / PEM2/project/src/Master 
         2. Manually run the Slave and Master scripts by calling `sudo python MasterMain.python` and `sudo python SlaveMain.python` respectively.
