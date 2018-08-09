@@ -18,7 +18,7 @@
         3. The serial port of RPi is set to serial terminal debugging function mode by default. If you want the serial port services as a common IO, you should modify the settings on the RPi.  
         Go to **Interfacing Options** -> **Serial** and select **No** in the first and **Yes** in the second dialog.
         4. Press `Finish` to save the settings
-    3. When logged into the Raspberries, open a terminal and from the home repository of your raspberry (~), pull the source code from [Github](https://github.com/benedikt-mayer/nfcradio) by e.g. calling `git clone https://github.com/benedikt-mayer/nfcradio.git`.
+    3. When logged into the Raspberries, open a terminal and from the home repository of your raspberry (`~`, default is `/home/pi`), pull the source code from [Github](https://github.com/benedikt-mayer/nfcradio) by e.g. calling `git clone https://github.com/benedikt-mayer/nfcradio.git`.
     4. Run the shell script in the root repository of the git folder by opening a terminal and running `sudo sh install.sh` to install all necessary python libraries, setting config files etc.  
        This will reboot the device at the end. Don't interrupt the script unless you are prompted (which you will be).
     5. After the restart you should see `Scan NFC Tag` on the smaller display: If you now approximate your nfc tag to the reader, it should start playing music from that album / genre.
