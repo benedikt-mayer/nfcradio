@@ -91,7 +91,7 @@ tput sgr0;
 run_autostart_script()
 {
     ANSWER=$1
-    if [ "$ANSWER" = "master" ]
+    if "$ANSWER" = "master"
     then
         # if there is no such line already, add it
         if ! grep -q "@sudo /usr/bin/python2.7 /home/pi/nfcradio/project/src/Master/MasterMain.py" /home/pi/.config/lxsession/LXDE-pi/autostart
@@ -100,10 +100,10 @@ run_autostart_script()
         else 
             echo "autostart data already added"
         fi
-    elif [ "$ANSWER" = "slave" ]
+    elif "$ANSWER" = "slave"
     then
         # if there is no such line already, add it
-        if ! grep -q "@sudo /usr/bin/python2.7 /home/pi/nfcradio/project/src/Slave/SlaveMain.py" >> /home/pi/.config/lxsession/LXDE-pi/autostart
+        if ! grep -q "@sudo /usr/bin/python2.7 /home/pi/nfcradio/project/src/Slave/SlaveMain.py" /home/pi/.config/lxsession/LXDE-pi/autostart
         then
             echo "@sudo /usr/bin/python2.7 /home/pi/nfcradio/project/src/Slave/SlaveMain.py" >> /home/pi/.config/lxsession/LXDE-pi/autostart
         else 
@@ -111,8 +111,8 @@ run_autostart_script()
         fi
     else 
         echo "wrong input! are you running on the ${red}master${reset} or ${red}slave${reset}?"
-        read user_input
-        run_autostart_script $user_input
+        read alternative_user_input
+        run_autostart_script $alternative_user_input
     fi
 }
 echo "setting up autostart. are you running on the ${red}master${reset} or ${red}slave${reset}?"
@@ -125,29 +125,29 @@ echo "done"
 echo "------------------------------------------------"
 
 # now reboot
-# reboot_prompt()
-# {
-#     if $1 = "yes"
-#     then
-#         echo "${red}rebooting in 5 seconds."
-#         sleep 1
-#         echo "rebooting in 4 seconds."
-#         sleep 1
-#         echo "rebooting in 3 seconds."
-#         sleep 1
-#         echo "rebooting in 2 seconds."
-#         sleep 1
-#         echo "rebooting in 1 seconds.${reset}"
-#         sleep 1
-#         reboot
-#     elif $1 = "no"
-#         echo "not rebooting. not all changes will take effect."
-#     else
-#         echo "wrong input! a reboot is necessary for the changes to change effect. do you want to reboot now? ${red}yes${reset} or ${red}no${reset}?"
-#         read reboot_input
-#         reboot_prompt $reboot_input
-#     fi
-# }
-# echo "a reboot is necessary for the changes to change effect. do you want to reboot now? ${red}yes${reset} or ${red}no${reset}?"
-# read reboot_input
-# reboot_prompt $reboot_input
+reboot_prompt()
+{
+    if $1 = "yes"
+    then
+        echo "${red}rebooting in 5 seconds."
+        sleep 1
+        echo "rebooting in 4 seconds."
+        sleep 1
+        echo "rebooting in 3 seconds."
+        sleep 1
+        echo "rebooting in 2 seconds."
+        sleep 1
+        echo "rebooting in 1 seconds.${reset}"
+        sleep 1
+        reboot
+    elif $1 = "no"
+        echo "not rebooting. not all changes will take effect."
+    else
+        echo "wrong input! a reboot is necessary for the changes to change effect. do you want to reboot now? ${red}yes${reset} or ${red}no${reset}?"
+        read reboot_input
+        reboot_prompt $reboot_input
+    fi
+}
+echo "a reboot is necessary for the changes to change effect. do you want to reboot now? ${red}yes${reset} or ${red}no${reset}?"
+read reboot_input
+reboot_prompt $reboot_input
