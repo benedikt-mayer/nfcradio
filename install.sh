@@ -1,3 +1,5 @@
+red=`tput setaf 1`
+reset=`tput sgr0`
 # edit config file
 tput setaf 2;echo "------------------------------------------------"
 echo "writing i2c information to /etc/modules"
@@ -107,12 +109,12 @@ run_autostart_script()
             echo "autostart data already added"
         fi
     else 
-        echo "wrong input! please write master or slave"
+        echo "wrong input! please write ${red}master${reset} or ${red}slave${reset}"
         read user_input
         run_autostart_script $user_input
     fi
 }
-echo "setting up autostart. are you running on the master or slave?"
+echo "setting up autostart. are you running on the ${red}master${reset} or ${red}slave${reset}?"
 read user_input
 run_autostart_script $user_input
 
