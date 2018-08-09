@@ -1,6 +1,7 @@
 # edit config file
 tput setaf 2;echo "-------------------------------"
 echo "writing i2c information to /etc/modules"
+echo "-------------------------------"
 tput sgr0
 
 if ! grep -q "i2c-bcm2708" /etc/modules
@@ -13,6 +14,7 @@ fi
 # add soundcard
 tput setaf 2;echo "-------------------------------"
 echo "making the usb soundcard the default"
+echo "-------------------------------"
 tput sgr0
 
 if ! grep -Pzoq "pcm.!default { \n    type hw \n    card 1 \n} \n \nctl.!default { \n    type hw \n    card 1 \n} \n" /etc/asound.conf
@@ -27,6 +29,7 @@ fi
 # update apt-get just in case
 tput setaf 2;echo "-------------------------------"
 echo "updating apt-get"
+echo "-------------------------------"
 tput sgr0
 
 sudo apt-get update
@@ -34,6 +37,7 @@ sudo apt-get update
 # pip
 tput setaf 2;echo "-------------------------------"
 echo "installing pip"
+echo "-------------------------------"
 tput sgr0
 
 sudo apt install python-pip
@@ -41,6 +45,7 @@ sudo apt install python-pip
 # display libraries
 tput setaf 2;echo "-------------------------------"
 echo "installing python python dependencies"
+echo "-------------------------------"
 tput sgr0
 
 sudo apt-get install python-dev
@@ -51,6 +56,7 @@ sudo apt-get install python-imaging
 # install spi-dev
 tput setaf 2;echo "-------------------------------"
 echo "installing spi-dev"
+echo "-------------------------------"
 tput sgr0;
 
 $currentdir = echo pwd
@@ -67,6 +73,7 @@ cd $currentdir
 # python libraries
 tput setaf 2;echo "-------------------------------"
 echo "installing python libraries"
+echo "-------------------------------"
 tput sgr0;
 
 pip install Pillow
@@ -75,6 +82,7 @@ pip install pygame
 # add our scripts to autostart
 tput setaf 2;echo "-------------------------------"
 echo "adding scripts to autostart"
+echo "-------------------------------"
 tput sgr0;
 
 run_autostart_script()
@@ -111,3 +119,4 @@ run_autostart_script $user_input
 # completed
 tput setaf 2;echo "-------------------------------"
 echo "done"
+echo "-------------------------------"
