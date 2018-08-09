@@ -44,7 +44,7 @@ sudo apt install python-pip
 
 # display libraries
 tput setaf 2;echo "------------------------------------------------"
-echo "installing python python dependencies"
+echo "installing python dependencies"
 echo "------------------------------------------------"
 tput sgr0
 
