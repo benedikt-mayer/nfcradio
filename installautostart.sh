@@ -3,10 +3,10 @@ run_autostart_script()
     ANSWER=$1
     if [ "$ANSWER" = "master" ]
     then
-        echo "@sudo /usr/bin/python2.7 /home/pi/nfcradio/projects/src/Master/MasterMain.py" >> /.config/lxsession/LXDE-pi/autostart
+        echo "@sudo /usr/bin/python2.7 /home/pi/nfcradio/projects/src/Master/MasterMain.py" >> /home/pi/.config/lxsession/LXDE-pi/autostart
     elif [ "$ANSWER" = "slave" ]
     then
-        echo "@sudo /usr/bin/python2.7 /home/pi/nfcradio/projects/src/Slave/SlaveMain.py" >> /.config/lxsession/LXDE-pi/autostart
+        echo "@sudo /usr/bin/python2.7 /home/pi/nfcradio/projects/src/Slave/SlaveMain.py" >> /home/pi/.config/lxsession/LXDE-pi/autostart
     else 
         echo "wrong input! please write master or slave"
         read user_input
