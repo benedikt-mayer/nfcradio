@@ -14,3 +14,4 @@ pip install Pillow
 # pip install ImageDraw
 # pip install ImageFont
 pip install pygame
+# maybe add card 1 etc. to asound.conf
