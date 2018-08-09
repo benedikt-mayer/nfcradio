@@ -141,6 +141,7 @@ reboot_prompt()
         sleep 1
         reboot
     elif $1 = "no"
+    then
         echo "not rebooting. not all changes will take effect."
     else
         echo "wrong input! a reboot is necessary for the changes to change effect. do you want to reboot now? ${red}yes${reset} or ${red}no${reset}?"
