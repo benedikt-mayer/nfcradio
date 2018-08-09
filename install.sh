@@ -7,7 +7,7 @@ sudo python setup.py install # after downloading gpio setup, see if this is opti
 sudo apt-get install python-smbus
 sudo apt-get install python-serial
 sudo apt-get install python-imaging
-# sudo python setup.py install # after downloading spidev, see if this is optional
+# insert installspidev.sh here
 # python libraries
 pip install Pillow
 # pip install Image

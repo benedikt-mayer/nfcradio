@@ -19,7 +19,7 @@ pygame.mixer.init(44100, -16, 2, 2048)
 gpio.setmode(gpio.BCM)
 gpio.setup(13, gpio.IN, pull_up_down=gpio.PUD_UP)
 
-MUSICPATH = "/home/pi/PEM2/project/resources/music/"
+MUSICPATH = "/home/pi/nfcradio/project/resources/music/"
 
 songs = {
     "1": [
