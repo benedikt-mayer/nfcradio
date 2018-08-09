@@ -28,13 +28,14 @@ else
     echo "soundcard configuration data already added"
 fi
 
-# update apt-get just in case
+# update all installed packages just in case
 tput setaf 2;echo "------------------------------------------------"
 echo "updating apt-get"
 echo "------------------------------------------------"
 tput sgr0
 
 sudo apt-get update
+sudo apt-get upgrade
 
 # pip
 tput setaf 2;echo "------------------------------------------------"
