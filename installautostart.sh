@@ -1,10 +1,10 @@
 run_autostart_script()
 {
     ANSWER=$1
-    if [ "$ANSWER" == "master" ]
+    if [ "$ANSWER" = "master" ]
     then
         echo "@sudo /usr/bin/python2.7 /home/pi/nfcradio/projects/src/Master/MasterMain.py" >> /.config/lxsession/LXDE-pi/autostart
-    elif [ "$ANSWER" == "slave" ]
+    elif [ "$ANSWER" = "slave" ]
     then
         echo "@sudo /usr/bin/python2.7 /home/pi/nfcradio/projects/src/Slave/SlaveMain.py" >> /.config/lxsession/LXDE-pi/autostart
     else 
