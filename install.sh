@@ -125,29 +125,29 @@ echo "done"
 echo "------------------------------------------------"
 
 # now reboot
-reboot_prompt()
-{
-if $1 = "yes"
-then
-    echo "${red}rebooting in 5 seconds."
-    sleep 1
-    echo "rebooting in 4 seconds."
-    sleep 1
-    echo "rebooting in 3 seconds."
-    sleep 1
-    echo "rebooting in 2 seconds."
-    sleep 1
-    echo "rebooting in 1 seconds.${reset}"
-    sleep 1
-    reboot
-elif $1 = "no"
-    echo "not rebooting. not all changes will take effect."
-else
-    echo "wrong input! a reboot is necessary for the changes to change effect. do you want to reboot now? ${red}yes${reset} or ${red}no${reset}?"
-    read reboot_input
-    reboot_prompt $reboot_input
-fi
-}
-echo "a reboot is necessary for the changes to change effect. do you want to reboot now? ${red}yes${reset} or ${red}no${reset}?"
-read reboot_input
-reboot_prompt $reboot_input
+# reboot_prompt()
+# {
+#     if $1 = "yes"
+#     then
+#         echo "${red}rebooting in 5 seconds."
+#         sleep 1
+#         echo "rebooting in 4 seconds."
+#         sleep 1
+#         echo "rebooting in 3 seconds."
+#         sleep 1
+#         echo "rebooting in 2 seconds."
+#         sleep 1
+#         echo "rebooting in 1 seconds.${reset}"
+#         sleep 1
+#         reboot
+#     elif $1 = "no"
+#         echo "not rebooting. not all changes will take effect."
+#     else
+#         echo "wrong input! a reboot is necessary for the changes to change effect. do you want to reboot now? ${red}yes${reset} or ${red}no${reset}?"
+#         read reboot_input
+#         reboot_prompt $reboot_input
+#     fi
+# }
+# echo "a reboot is necessary for the changes to change effect. do you want to reboot now? ${red}yes${reset} or ${red}no${reset}?"
+# read reboot_input
+# reboot_prompt $reboot_input
