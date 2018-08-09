@@ -22,19 +22,13 @@
            `i2c-bcm2708`  
            Press the keys Ctrl+X to exit, and input Y to save the settings. Then, reboot the module to make the settings take effect.
     4. When logged into the Raspberries, pull the source code from [Github](https://github.com/benedikt-mayer/nfcradio).
-    5. Run the shell script in the root repository of the git folder by opening a terminal and running `sudo sh install.sh` to install all necessary python libraries.
+    5. Run the shell script in the root repository of the git folder by opening a terminal and running `sudo sh install.sh` to install all necessary python libraries, setting config files etc.
     6. Manually run the scripts to see if everything was installed properly:
         1. Navigate to the slave / master folder in PEM2/project/src/Slave / PEM2/project/src/Master 
         2. Manually run the Slave and Master scripts by calling `sudo python MasterMain.python` and `sudo python SlaveMain.python` respectively.
         3. You should now see `Scan NFC Tag` on the smaller display and if you approximate your nfc tag to the reader, it should start playing music from that album / genre.
-    7.  If you want to automatically run the scripts when starting your Raspberries:
-        1. Open a terminal and call `cd ~/.config/lxsession/LXDE-pi/` to navigate to the LXDE config folder
-        2. Open the autostart file by calling `sudo nano autostart`
-        3. Now add to the end of the file:
-            1. Add `@sudo /usr/bin/python2.7 /home/pi/nfcradio/project/src/Master/MasterMain.py` (or any other version of Python 2) for the master Raspberry
-            2. Add `@sudo /usr/bin/python2.7 /home/pi/nfcradio/project/src/Slave/SlaveMain.py` (or any other version of Python 2) for the slave Raspberry
-    8.  Reboot both Raspberries by unplugging / replugging them or calling `sudo reboot`
-    9.  After the restart you should see `Scan NFC Tag` on the smaller display and if you approximate your nfc tag to the reader, it should start playing music from that album / genre.
+    7.  Reboot both Raspberries by unplugging / replugging them or calling `sudo reboot`
+    8.  After the restart you should see `Scan NFC Tag` on the smaller display and if you approximate your nfc tag to the reader, it should start playing music from that album / genre.
 
 # Licenses
 
