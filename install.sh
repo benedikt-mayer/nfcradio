@@ -5,6 +5,15 @@ then
 else 
     echo "i2c data already added"
 fi
+# add soundcard
+if ! grep -Pzoq "pcm.!default { \n    type hw \n    card 1 \n} \n \nctl.!default { \n    type hw \n    card 1 \n} \n" /etc/asound.conf
+then
+    touch /etc/asound.conf
+    echo "pcm.!default { \n    type hw \n    card 1 \n} \n \nctl.!default { \n    type hw \n    card 1 \n} \n" >> /etc/asound.conf
+    amixer set PCM 80%
+else 
+    echo "soundcard configuration data already added"
+fi
 # update apt-get just in case
 sudo apt-get update
 # pip
@@ -14,7 +23,6 @@ sudo apt-get install python-dev
 sudo apt-get install python-smbus
 sudo apt-get install python-serial
 sudo apt-get install python-imaging
-sudo apt-get install pcregrep
 # install spi-dev
 $currentdir = echo pwd
 cd ~
@@ -29,15 +37,6 @@ cd $currentdir
 # python libraries
 pip install Pillow
 pip install pygame
-# add soundcard
-if ! grep -Pzoq "pcm.!default { \n    type hw \n    card 1 \n} \n \nctl.!default { \n    type hw \n    card 1 \n} \n" /etc/asound.conf
-then
-    touch /etc/asound.conf
-    echo "pcm.!default { \n    type hw \n    card 1 \n} \n \nctl.!default { \n    type hw \n    card 1 \n} \n" >> /etc/asound.conf
-    amixer set PCM 80%
-else 
-    echo "soundcard configuration data already added"
-fi
 # add our scripts to autostart
 run_autostart_script()
 {
