@@ -127,7 +127,7 @@ echo "------------------------------------------------"
 # now reboot
 reboot_prompt()
 {
-    if $1 = "yes"
+    if [ "$1" = "yes" ]
     then
         echo "${red}rebooting in 5 seconds."
         sleep 1
@@ -140,7 +140,7 @@ reboot_prompt()
         echo "rebooting in 1 seconds.${reset}"
         sleep 1
         reboot
-    elif $1 = "no"
+    elif [ "$1" = "no" ]
     then
         echo "not rebooting. not all changes will take effect."
     else
