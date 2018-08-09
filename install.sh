@@ -91,7 +91,7 @@ tput sgr0;
 run_autostart_script()
 {
     ANSWER=$1
-    if "$ANSWER" = "master"
+    if [ "$ANSWER" = "master" ]
     then
         # if there is no such line already, add it
         if ! grep -q "@sudo /usr/bin/python2.7 /home/pi/nfcradio/project/src/Master/MasterMain.py" /home/pi/.config/lxsession/LXDE-pi/autostart
@@ -100,7 +100,7 @@ run_autostart_script()
         else 
             echo "autostart data already added"
         fi
-    elif "$ANSWER" = "slave"
+    elif [ "$ANSWER" = "slave" ]
     then
         # if there is no such line already, add it
         if ! grep -q "@sudo /usr/bin/python2.7 /home/pi/nfcradio/project/src/Slave/SlaveMain.py" /home/pi/.config/lxsession/LXDE-pi/autostart
