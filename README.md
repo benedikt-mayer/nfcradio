@@ -3,10 +3,10 @@
     1. Create an account on [Arduino Create](https://create.arduino.cc/).
     2. Install the Arduino Create plugin from [here](https://create.arduino.cc/getting-started/plugin).
     3. Retrieve your nfc tag UID
-        1. Now load the sketch `read_nfc_tag` to the arduino while connected to your computer.
+        1. Now load the sketch [`read_nfc_tag`](https://create.arduino.cc/editor/banjo8/8b9f83ed-a522-4f10-be2b-dee91c7dc1d6/preview) to the arduino while connected to your computer.
         2. Approximate your nfc tag / card to the nfc reader.
         3. Look at the Monitor on the left of the editor for a UID: it looks like this `CE 2F F1 D9`, but can be shorter or longer
-    4. Now that you have your UID, modify the sketch `read_rfid_potentiometer`
+    4. Now that you have your UID, modify the sketch [`read_rfid_potentiometer`](https://create.arduino.cc/editor/banjo8/8237c80f-99fb-4187-8e98-c224d42e4b03/preview)
         1. Replace the UIDs in line 115 and 122 with your UIDs. One is enough, two are better so that you can change albums / genres.
         2. Save and upload the script to the Arduino.
         3. Now connect the Arduino to your Master Raspberry Pi and reboot the Pi.
